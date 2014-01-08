@@ -1,5 +1,7 @@
 import lejos.nxt.LightSensor;
+import lejos.nxt.UltrasonicSensor;
 import lejos.nxt.SensorPort;
+
 import lejos.robotics.subsumption.Arbitrator;
 import lejos.robotics.subsumption.Behavior;
 
@@ -16,6 +18,7 @@ public class Start {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LightSensor light=new LightSensor(SensorPort.S1);
+		UltrasonicSensor ultrason = new UltrasonicSensor(SensorPort.S2);
 		
 		Behavior b1 = new Forward(light);
 	    Behavior b2 = new SearchLine(light);
